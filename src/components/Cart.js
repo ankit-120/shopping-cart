@@ -4,14 +4,14 @@ import SingleProduct from './SingleProduct';
 
 const Cart = () => {
 
-    const { cart } = useContext(CartContext);
-    console.log(cart)
+    const { state } = useContext(CartContext);
+    console.log(state.cart)
 
     const [price, setPrice] = useState(0);
 
     useEffect(() => {
-        setPrice(cart.reduce((acc, prod) => acc + Math.ceil(prod.price), 0));
-    }, [cart])
+        setPrice(state.cart.reduce((acc, prod) => acc + Math.ceil(prod.price), 0));
+    }, [state])
 
     return (
         <div>
@@ -23,7 +23,7 @@ const Cart = () => {
                 </div>
                 <div className="row">
                     {
-                        cart.map((prod) => (
+                        state.cart.map((prod) => (
                             <div className="col-lg-3 col-md-4 " key={prod.id}>
                                 <SingleProduct prod={prod} />
                             </div>

@@ -3,11 +3,11 @@ import { CartContext } from './Context'
 
 const SingleProduct = ({ prod }) => {
 
-    const { cart, setCart } = useContext(CartContext);
+    const { state, dispatch } = useContext(CartContext);
 
     function checkCart(){
-        for(let i=0;i<cart.length;i++){
-            if(cart[i].id === prod.id){
+        for(let i=0;i<state.cart.length;i++){
+            if(state.cart[i].id === prod.id){
                 return true;
             }
         }
@@ -26,12 +26,18 @@ const SingleProduct = ({ prod }) => {
                 {
                     checkCart() ? (    
                         <button className='m-3 p-2 px-3 rounded-3'
-                        onClick={() => setCart(cart.filter((c)=>c.id !== prod.id))} >
+                        onClick={() => dispatch({
+                            type: 'REMOVE',
+                            payload: prod
+                        })} >
                         Remove from cart
                     </button>
                     ) : (
                         <button className='m-3 p-2 px-3 rounded-3'
-                            onClick={() =>setCart([...cart, prod]) }>
+                            onClick={() =>dispatch({
+                                type: 'ADD',
+                                payload: prod
+                            })}>
                             Add to cart
                         </button>
                     )

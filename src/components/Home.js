@@ -21,8 +21,8 @@ const Home = () => {
 
     faker.seed(100);
 
-    const {cart} = useContext(CartContext)
-    console.log(cart)
+    // const {state} = useContext(CartContext)
+    // console.log(cart)
 
     const productsArray = [...Array(20)].map(()=>({
         id : faker.string.uuid(),
