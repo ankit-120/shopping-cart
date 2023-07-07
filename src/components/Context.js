@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useState } from 'react'
+import React, { createContext, useReducer} from 'react'
 
 const reducer = (state,action) => {
     if(action.type === 'ADD'){
