@@ -1,0 +1,30 @@
+.home-main-div{
+    height: 90vh;
+}
+
+.left-div {
+    height: 100%;
+    padding: 10px;
+    /* box-sizing: border-box; */
+    /* border: 2px solid red; */
+
+}
+
+.filter-div{
+    padding: 30px;
+    color: white;
+    height: 100%;
+}
+
+.right-div {
+    overflow-y: auto;
+    height: 90vh;
+}
+
+@media (max-width: 600px){
+    .filter-div{
+        padding: 0px;
+        padding-top: 20px;
+    }
+}
+

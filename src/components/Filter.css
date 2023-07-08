@@ -1,0 +1,14 @@
+.filter-head-div{
+    font-size: 40px;
+    font-weight: 800;
+}
+.filter-types-div{
+    padding: 10px 0px;
+}
+
+@media (max-width: 600px){
+    .filter-head-div{
+        font-size: 18px;
+        font-weight: 800;
+    }
+}

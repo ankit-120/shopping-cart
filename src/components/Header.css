@@ -1,0 +1,45 @@
+.header{
+    /* height: 10%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 10vh; */
+}
+
+.div1,.div3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+@media (max-width: 600px){
+    .div1{
+        order: 2;
+    }
+    .div2{
+        order: 1;
+    }
+    .div3{
+        order: 3;
+    }
+    .home{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    .cart{
+        padding-bottom: 10px;
+    }
+    
+}
+
+.img-dropdown{
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50px;
+    object-fit: cover;
+}

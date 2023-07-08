@@ -1,0 +1,36 @@
+.main-cart-div{
+    height: 90vh;
+}
+
+.left-cart-div{
+    overflow-y: auto;
+    height: 90vh;
+}
+
+.right-cart{
+    height: 100%;
+    color: white;
+    padding: 20px;
+}
+
+.subtotal-div{
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.price-div{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media (max-width: 600px){
+    .left-cart-div{
+        order: 2;
+    }
+    .right-cart-div{
+        order: 1;
+    }
+    .right-cart{
+        height: 120px;
+    }
+}
