@@ -29,8 +29,8 @@ const Header = () => {
                                     type: 'FILTER_BY_SEARCH',
                                     payload: e.target.value
                                 })} />
-                        )}
-                    </div>
+                    )}
+                    </div> 
                     <div className="col-sm-2 col-6 div3 text-center ">
                         <Dropdown className='cart'>
                             <Dropdown.Toggle variant="success" id="dropdown-basic" >
